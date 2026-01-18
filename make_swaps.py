@@ -1,7 +1,7 @@
 import sys
 import os
 import subprocess
-if len(sys.argv) != 5:
+if len(sys.argv) != 6:
     print("Usage: python make_swaps.py <num> <size_KiB> <force_no_frag> <start_index> <swapon>")
     sys.exit(1)
 
@@ -9,6 +9,7 @@ num = int(sys.argv[1])
 size_kib = int(sys.argv[2])
 force_no_frag = int(sys.argv[3])
 start_index = int(sys.argv[4])
+swapon = int(sys.argv[5])
 for i in range(num):
     fragmented = True
     exists = False
